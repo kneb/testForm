@@ -56,7 +56,11 @@
                         </div>
                         <select class="form-select" id="polyclinic" name="polyclinic" required>
                             @foreach( $polyclinics as $polyclinic)
-                            <option value="{{ $polyclinic['id'] }}">{{ $polyclinic['title'] }}</option>
+                            <option value="{{ $polyclinic['id'] }}"
+                                @if(old('polyclinic') == $polyclinic['id'])
+                                    selected
+                                @endif
+                                >{{ $polyclinic['title'] }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -70,7 +74,11 @@
                         </div>
                         <select class="form-select" id="reason" name="reason" required>
                             @foreach($reasons as $reason)
-                            <option value="{{ $reason['id'] }}">{{ $reason['title'] }}</option>
+                            <option value="{{ $reason['id'] }}"
+                                 @if(old('reason') == $reason['id'])
+                                    selected
+                                 @endif
+                            >{{ $reason['title'] }}</option>
                             @endforeach
                         </select>
                     </div>
