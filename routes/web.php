@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/add', 'MainController@add_complaint');
 
-Route::get('/', 'MainController@home');
+Route::get('/', 'MainController@home')->name("home");
 

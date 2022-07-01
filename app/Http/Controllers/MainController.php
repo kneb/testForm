@@ -2,12 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Polyclinic;
+use App\Reason;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
     public function home(){
-        return view('home');
+        $polyclinics = new Polyclinic();
+        $reasons = new Reason();
+        return view('home', [
+            'polyclinics' => $polyclinics->all(),
+            'reasons' => $reasons->all()
+        ]);
     }
 
     public function add_complaint(Request $request){
@@ -18,5 +25,7 @@ class MainController extends Controller
            'polyclinic' => 'required',
            'reason' => 'required'
         ]);
+
+        return redirect()->route("home");
     }
 }

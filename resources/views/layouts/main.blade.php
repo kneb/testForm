@@ -55,10 +55,9 @@
                             </svg>
                         </div>
                         <select class="form-select" id="polyclinic" name="polyclinic" required>
-                            <option value="0">Поликлиника №1</option>
-                            <option value="1">Поликлиника №2</option>
-                            <option value="2">Поликлиника №3</option>
-                            <option value="3">Поликлиника №4</option>
+                            @foreach( $polyclinics as $polyclinic)
+                            <option value="{{ $polyclinic['id'] }}">{{ $polyclinic['title'] }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -70,10 +69,9 @@
                             </svg>
                         </div>
                         <select class="form-select" id="reason" name="reason" required>
-                            <option value="0">Повод №1</option>
-                            <option value="1">Повод №2</option>
-                            <option value="2">Повод №3</option>
-                            <option value="3">Повод №4</option>
+                            @foreach($reasons as $reason)
+                            <option value="{{ $reason['id'] }}">{{ $reason['title'] }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
