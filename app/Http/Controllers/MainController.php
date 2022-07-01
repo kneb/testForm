@@ -13,9 +13,11 @@ class MainController extends Controller
     public function home(){
         $polyclinics = new Polyclinic();
         $reasons = new Reason();
+        $complaints = Complaint::orderby('created_at', 'desc')->get();
         return view('home', [
             'polyclinics' => $polyclinics->all(),
-            'reasons' => $reasons->all()
+            'reasons' => $reasons->all(),
+            'complaints' => $complaints
         ]);
     }
 

@@ -126,40 +126,8 @@
     </div>
 </header>
 <div class="container-md">
-    <div class="d-flex pb-1 border-bottom mb-2">
-        <div class="dropdown pe-3">
-            <a class="rounded-0 rounded-bottom btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                Повод
-            </a>
-            <ul class="dropdown-menu overflow-auto" aria-labelledby="dropdownMenuLink" style="max-height: 40vh;">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-        </div>
-
-        <div class="dropdown">
-            <a class="rounded-0 rounded-bottom btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                Поликлиника
-            </a>
-            <ul class="dropdown-menu overflow-auto" aria-labelledby="dropdownMenuLink" style="max-height: 40vh;">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-        </div>
-    </div>
 @yield('main_content')
 </div>
 <script language="JavaScript" src="js/bootstrap.bundle.min.js"></script>
-<script>
-
-            document.getElementById('navbarHeader').addEventListener('hidden', function () {
-               console.log('kjkjhkjh');
-            });
-</script>
 </body>
 </html>
